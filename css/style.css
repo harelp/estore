@@ -1,0 +1,352 @@
+/*  
+  Name: Harel Peri
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body 
+{
+  font-family: "Montserrat", sans-serif;
+  color: #252627;
+}
+
+nav 
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  grid-template-areas: 
+  "a a" 
+  "b c";
+  width: 100%; 
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+}
+
+.sticky {
+	position: fixed;
+  z-index: 1;
+  padding: 0 15px !important;
+	transition-duration: 500ms;
+}
+#close{
+  cursor: pointer;
+}
+
+.footer
+{
+  position: fixed;
+  top: 0px;
+  padding: 25px 0;
+  z-index: 3;;
+  text-align: center;
+  width:100%;
+  background-color: #F31431;
+  color: white;
+}
+
+
+#cartOutput
+{
+  display: grid;
+  margin: 15px 0 0 15px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "image id" "image qty" "image price" "image subtotal";
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.3);
+  padding: 5px;
+
+  
+}
+
+.grid-contain
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 10px;
+}
+
+.cartId {
+  grid-area: id;
+  padding-left: 5px;
+}
+.cartPrice{
+  grid-area: price;
+  padding-left: 5px;
+}
+.cartQty{
+  grid-area: qty;
+  padding-left: 5px;
+}
+.cartSub{
+  grid-area: subtotal;
+  padding-left: 5px;
+}
+
+.cartConatiner
+{
+  width: 50%;
+  height: 400px;
+  display: block;
+  position: fixed;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,1.0);
+  top: 18%;
+  left: 25%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+
+.reviewcontainer
+{
+  width: 40%;
+  height: 300px;
+  display: block;
+  position: fixed;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,1.0);
+  top: 18%;
+  left: 32%;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+
+.block{
+  float: right;
+  padding: 15px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.block:hover{
+  background-color: #252627;
+  color: white;
+}
+
+
+.title {
+  display: block;
+  padding: 15px;
+  border-bottom: black dashed 1px;
+}
+
+.description
+{
+  margin: 25px 0 0 15px;
+}
+
+.content {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  height: 300px;
+  padding: 15px;
+  justify-content: space-between;
+}
+
+.info {
+  width: 100%;
+  padding: 25px;
+}
+
+.reviews
+{
+  width: 100%;
+  justify-content: flex-start;
+  padding: 25px;
+}
+
+.relv i
+{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border: black solid 1px;
+  padding: 6px;
+  z-index: 2;
+  font-size: 25px;
+  text-align: center;
+  background-color: white;
+}
+
+.cartStyle
+{
+  display:flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* height: 80vh; */
+  /* height: 100%; */
+  
+}
+
+#cartCheckout
+{
+  width: 50%;
+  padding: 25px;
+  justify-self: flex-end;
+}
+
+
+
+#cartOutput .image{
+  grid-area: image;
+  width: 75px;
+  height: 75px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.display{
+  display: none;
+}
+.date 
+{
+  display: flex;
+  grid-area: a;
+  background-color: #0F90E8;
+  color: white;
+  width: 100%;
+  padding: 15px 0; 
+  justify-content: center;
+}
+
+.logo 
+{
+  grid-area: b; 
+  padding: 25px 0 25px 55px; 
+  margin-right: auto;
+  font-size: 30px;
+}
+
+.cart 
+{
+  cursor: pointer;
+  grid-area: c; 
+  padding: 25px 55px 25px 0; 
+  margin-left: auto; 
+  font-size: 30px;
+}
+
+.container
+{
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "l r";
+ 
+}
+
+.left
+{
+  grid-area: l;
+  display: grid; 
+  grid-template-rows: 1fr; 
+  grid-gap: 5px;
+  padding: 0 15px;
+  align-items: center;
+  margin-bottom: auto;
+  
+}
+
+.right
+{
+  grid-area: r; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box 
+{
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  grid-gap: 5px;
+  margin-bottom: 15px;
+  border: rgb(233, 233, 233) solid 1px;;
+  border-radius: 15px;
+  transition-duration: 500ms;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.3);
+}
+
+.boxLeft
+{
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: auto;
+  grid-gap: 5px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.3);
+}
+.filter
+{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  margin: auto;
+  grid-gap: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+a{
+cursor: pointer;
+display: inline-block;
+padding: 0.7em 1.7em;
+margin: 0 0.3em 0.3em 0;
+border-radius:0.2em;
+box-sizing: border-box;
+text-decoration:none;
+font-weight:400;
+color:#FFFFFF;
+background-color:#0F90E8;
+box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+text-align:center;
+position:relative;
+}
+a:hover{
+box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.25),inset 0 0 0em 0.05em rgba(255,255,255,0.22);
+}
+
+
+li {
+  display: inline-block;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+img
+{
+max-width:100%;
+max-height:100%;
+}
+
+  
+@font-face 
+{
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
+  src: url("https://fonts.googleapis.com/css?family=Lato:400i|Montserrat:400,700"); 
+}

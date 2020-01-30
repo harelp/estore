@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IWD2019 - Harel Peri</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <nav>
+        <section id="date" class="date"></section>
+        <h3 class="logo">eSTORE</h3>
+        <section class="cart"><i class="fas fa-shopping-bag"></i></section>
+    </nav>
+    <div class="container">
+        <section id="left" class="left">
+            <div class="filter">
+                <p>Filter By:</p>
+                <select id="displayFilter">
+                    <option>All</option>
+                </select>
+            </div>
+            <div class="boxLeft">
+                <div>Product ID:
+                    <input type="text" id="addItemId">
+                </div>
+                <div>Quantity:
+                    <input type="number" id="addItemQty">
+                </div>
+                
+                <a id="viewItem">View Details</a>
+                <a id="addItem"> Add Item </a>
+                <a id="removeItem">Remove Item  </a>
+            </div>
+
+            <div class="boxLeft">
+                <div>Product ID: <input type="text" id="reviewId" />
+                </div>
+                <div>Review: <input type="text" id="reviewDesc" />
+                </div>
+            
+                <a id="addReview">Add Review</a>
+            </div>
+
+        </section>
+        <section id="inventoryOutput" class="right">
+        </section>
+    </div>
+<div id="display" class="footer display">
+    <div id="addIDValidationMessage"></div>
+    <div id="addQtyValidationMessage"></div>
+    <!-- <i id="close" class="fas fa-times"></i> -->
+</div>
+
+<div id="cartoutput" class="cartConatiner display">
+    <div class="relv"><i id="close" class="fas fa-times"></i></div>
+    <div class="cartStyle">
+        <div id="grid" class="grid-contain">
+        </div>
+        
+        <div id="cartCheckout">
+        </div>
+    </div>
+</div>
+
+<div id="viewOutput" class="reviewcontainer display">
+    <div class="block"><i id="closeReview" class='fas fa-times'></i></div>
+    <div id='reviewStyle'>
+
+    </div>
+</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
